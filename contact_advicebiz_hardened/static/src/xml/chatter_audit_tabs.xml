@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="contact_advicebiz_hardened.ChatterAuditTabs"
+       t-inherit="mail.Chatter" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o-mail-Chatter-top')]" position="attributes">
+            <attribute name="t-att-style">advicebizIsPartnerChatter and advicebizAudit.activeTab === 'audit' ? 'display:none!important;' : ''</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('o-mail-Chatter-content')]" position="attributes">
+            <attribute name="t-if">!advicebizIsPartnerChatter or advicebizAudit.activeTab !== 'audit'</attribute>
+        </xpath>
+        <!-- Navigation is shown above the usual Send message / Log note /
+             Activity actions, at the start of the chatter header. -->
+        <xpath expr="//div[hasclass('o-mail-Chatter-top')]" position="before">
+            <div t-if="advicebizIsPartnerChatter"
+                 class="advicebiz-audit-tabs d-print-none d-flex gap-2 pt-2 px-2">
+                <button type="button" class="btn btn-sm"
+                        t-att-class="advicebizAudit.activeTab === 'messages' ? 'btn-primary' : 'btn-outline-secondary'"
+                        t-on-click="advicebizShowMessages">
+                    Mensagens
+                </button>
+                <button type="button" class="btn btn-sm"
+                        t-att-class="advicebizAudit.activeTab === 'audit' ? 'btn-primary' : 'btn-outline-secondary'"
+                        t-on-click="advicebizShowAudit">
+                    Histórico de Acessos
+                </button>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('o-mail-Chatter-content')]" position="before">
+            <div t-if="advicebizIsPartnerChatter and advicebizAudit.activeTab === 'audit'"
+                 class="advicebiz-audit-content flex-grow-1 o-scrollbar-thin overflow-auto p-3">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <strong>Histórico de Acessos</strong>
+                    <button type="button" class="btn btn-link btn-sm"
+                            t-att-disabled="advicebizAudit.loading"
+                            t-on-click="advicebizRefreshAudit">
+                        <i class="fa fa-refresh me-1"/> Atualizar
+                    </button>
+                </div>
+                <div t-if="advicebizAudit.error" class="alert alert-warning" role="alert">
+                    Não foi possível carregar o histórico. Verifique as permissões e tente novamente.
+                </div>
+                <div t-if="!advicebizAudit.loading and !advicebizAudit.rows.length and !advicebizAudit.error"
+                     class="text-muted small py-3">
+                    Ainda não existem registos de auditoria para este contacto.
+                </div>
+                <div t-foreach="advicebizAudit.rows" t-as="entry" t-key="entry.id"
+                     class="advicebiz-audit-entry border-bottom pb-3 mb-3">
+                    <div class="d-flex align-items-start gap-2">
+                        <i class="fa fa-shield text-muted pt-1" aria-hidden="true"/>
+                        <div class="flex-grow-1 min-w-0">
+                            <div class="fw-semibold" t-esc="entry.title"/>
+                            <div class="text-body mt-1" t-esc="entry.details"/>
+                            <div class="text-muted small mt-2">
+                                <span t-esc="entry.user"/>
+                                <span class="mx-1">·</span>
+                                <span t-esc="entry.when"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div t-if="advicebizAudit.loading" class="text-muted small py-3">
+                    <i class="fa fa-spinner fa-spin me-2"/>A carregar histórico…
+                </div>
+                <button t-if="advicebizAudit.hasMore and !advicebizAudit.loading"
+                        type="button" class="btn btn-outline-secondary btn-sm"
+                        t-on-click="advicebizLoadAudit">
+                    Mostrar mais registos
+                </button>
+            </div>
+        </xpath>
+    </t>
+</templates>

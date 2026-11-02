@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_partner_access_data_hardened" model="ir.ui.view">
+        <field name="name">res.partner.access.data.hardened</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority">90</field>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Dados de Acesso"
+                      name="advicebiz_access_data_page">
+                    <field name="advicebiz_access_data_ids"
+                           nolabel="1"
+                           context="{'default_partner_id': id}">
+                        <list editable="bottom">
+                            <field name="can_view_password" column_invisible="True"/>
+                            <field name="can_modify_fields" column_invisible="True"/>
+                            <field name="can_edit_record" column_invisible="True"/>
+                            <field name="can_delete_record" column_invisible="True"/>
+                            <field name="site" column_invisible="True"/>
+                            <field name="platform_id"
+                                   string="Plataforma"
+                                   required="True"
+                                   options="{'no_open': True}"
+                                   readonly="not can_modify_fields"/>
+                            <field name="username"
+                                   string="Login"
+                                   required="True"
+                                   readonly="not can_modify_fields"/>
+                            <field name="password_is_set" column_invisible="True"/>
+                            <field name="password"
+                                   string="Password"
+                                   widget="advicebiz_click_reveal_password"
+                                   password="True"
+                                   required="not password_is_set"/>
+                            <field name="observations"
+                                   string="Observações"
+                                   readonly="not can_modify_fields"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

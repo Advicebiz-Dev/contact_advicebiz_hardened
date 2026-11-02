@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tko_contact_access_data_user,tko.contact.access.data user,model_tko_contact_access_data,base.group_user,1,1,1,1
+access_tko_contact_access_platform_user,tko.contact.access.platform user,model_tko_contact_access_platform,base.group_user,1,0,1,0
+access_tko_contact_access_platform_admin,tko.contact.access.platform admin,model_tko_contact_access_platform,base.group_system,1,1,1,1

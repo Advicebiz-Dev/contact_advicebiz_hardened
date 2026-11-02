@@ -1,0 +1,119 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* contact_advicebiz_hardened
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 19.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: contact_advicebiz_hardened
+msgid "Dados de acesso do contacto"
+msgstr "Contact access data"
+
+#. module: contact_advicebiz_hardened
+msgid "Contacto"
+msgstr "Contact"
+
+#. module: contact_advicebiz_hardened
+msgid "Nome"
+msgstr "Name"
+
+#. module: contact_advicebiz_hardened
+msgid "URL"
+msgstr "URL"
+
+#. module: contact_advicebiz_hardened
+msgid "Nome de utilizador"
+msgstr "Username"
+
+#. module: contact_advicebiz_hardened
+msgid "Palavra-passe"
+msgstr "Password"
+
+#. module: contact_advicebiz_hardened
+msgid "Palavra-passe gravada por"
+msgstr "Password set by"
+
+#. module: contact_advicebiz_hardened
+msgid "Palavra-passe gravada em"
+msgstr "Password set at"
+
+#. module: contact_advicebiz_hardened
+msgid "Dados de Acesso"
+msgstr "Access Data"
+
+#. module: contact_advicebiz_hardened
+msgid "Não tem permissão para visualizar os Dados de Acesso."
+msgstr "You do not have permission to view Access Data."
+
+#. module: contact_advicebiz_hardened
+msgid "Não tem permissão para escrever novos Dados de Acesso."
+msgstr "You do not have permission to create new Access Data."
+
+#. module: contact_advicebiz_hardened
+msgid "Não tem permissão para apagar Dados de Acesso."
+msgstr "You do not have permission to delete Access Data."
+
+#. module: contact_advicebiz_hardened
+msgid "Não tem permissão para editar este Dado de Acesso. Sem permissão geral de edição, só pode corrigir um registo criado por si durante os 30 minutos seguintes à criação."
+msgstr "You do not have permission to edit this Access Data record. Without general edit permission, you can only correct a record you created within 30 minutes of its creation."
+
+#. module: contact_advicebiz_hardened
+msgid "Utilizador"
+msgstr "User"
+
+#. module: contact_advicebiz_hardened
+msgid "Data/hora"
+msgstr "Date/time"
+
+#. module: contact_advicebiz_hardened
+msgid "É necessário indicar um contacto válido."
+msgstr "A valid contact must be specified."
+
+#. module: contact_advicebiz_hardened
+msgid "Dado de Acesso criado"
+msgstr "Access Data created"
+
+#. module: contact_advicebiz_hardened
+msgid "Foi criado um Dado de Acesso para \"%s\"."
+msgstr "Access Data was created for \"%s\"."
+
+#. module: contact_advicebiz_hardened
+msgid "Dado de Acesso alterado"
+msgstr "Access Data changed"
+
+#. module: contact_advicebiz_hardened
+msgid "O Dado de Acesso de \"%s\" foi alterado. Campos: %s."
+msgstr "The Access Data for \"%s\" was changed. Fields: %s."
+
+#. module: contact_advicebiz_hardened
+msgid "Dado de Acesso apagado"
+msgstr "Access Data deleted"
+
+#. module: contact_advicebiz_hardened
+msgid "Foi apagado o Dado de Acesso de \"%s\"."
+msgstr "The Access Data for \"%s\" was deleted."
+
+#. module: contact_advicebiz_hardened
+msgid "Palavra-passe visualizada"
+msgstr "Password viewed"
+
+#. module: contact_advicebiz_hardened
+msgid "Foi visualizada a palavra-passe de \"%s\"."
+msgstr "The password for \"%s\" was viewed."
+
+#. module: contact_advicebiz_hardened
+msgid "Não foi possível registar a visualização da palavra-passe."
+msgstr "The password view could not be logged."
+
+#. module: contact_advicebiz_hardened
+msgid "Ocultar palavra-passe"
+msgstr "Hide password"
+
+#. module: contact_advicebiz_hardened
+msgid "Ver palavra-passe"
+msgstr "View password"

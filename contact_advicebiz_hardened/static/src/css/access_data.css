@@ -1,0 +1,21 @@
+.advicebiz_password_field {
+    min-width: 170px;
+}
+
+.advicebiz_password_stored_input[readonly] {
+    cursor: default;
+}
+
+.advicebiz_password_icon {
+    opacity: 0.72;
+    text-decoration: none !important;
+    min-width: 18px;
+}
+
+.advicebiz_password_icon:hover {
+    opacity: 1;
+}
+
+.advicebiz_password_copy {
+    opacity: 0.9;
+}

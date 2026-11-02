@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_access_platform_list" model="ir.ui.view">
+        <field name="name">tko.contact.access.platform.list</field>
+        <field name="model">tko.contact.access.platform</field>
+        <field name="arch" type="xml">
+            <list create="1" edit="0" delete="1">
+                <field name="name"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_access_platform_form" model="ir.ui.view">
+        <field name="name">tko.contact.access.platform.form</field>
+        <field name="model">tko.contact.access.platform</field>
+        <field name="arch" type="xml">
+            <form string="Plataforma" delete="1">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_access_platform" model="ir.actions.act_window">
+        <field name="name">Plataformas dos Dados de Acesso</field>
+        <field name="res_model">tko.contact.access.platform</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem id="menu_access_platform_settings"
+              name="Plataformas dos Dados de Acesso"
+              action="action_access_platform"
+              parent="contacts.menu_contacts"
+              groups="base.group_system"
+              sequence="95"/>
+</odoo>

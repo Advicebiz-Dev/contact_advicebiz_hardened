@@ -1,0 +1,8 @@
+.advicebiz-audit-tabs {
+    border-bottom: 1px solid var(--o-gray-300, #ddd);
+    padding-bottom: 8px;
+}
+.advicebiz-audit-entry { overflow-wrap: anywhere; }
+.advicebiz-audit-content { min-height: 160px; }
+
+.advicebiz-audit-entry .text-body { white-space: pre-line; }
